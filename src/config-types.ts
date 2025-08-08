@@ -6,7 +6,7 @@ export type PiHoleCredentials = {
 };
 
 export type ConfigTypes = {
-    piHoles?: PiHoleCredentials[];
+    'pi-holes'?: PiHoleCredentials[];
     'allowed-domains'?: {
         domain: string;
         type: 'exact-allow' | 'regex-allow';

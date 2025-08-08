@@ -17,7 +17,7 @@ export default defineConfig([
     {
         files: ['**/*.json'],
         plugins: { json },
-        language: 'json/json',
+        language: 'json/json5',
         extends: ['json/recommended'],
     },
     {

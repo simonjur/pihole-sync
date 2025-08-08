@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        /* Node.js 24+ can run .ts directly, so we mainly need type checking and tooling support */
+        "target": "ES2023", // Modern JS output
+        "module": "ESNext", // Keep ESM syntax
+        "moduleResolution": "bundler", // Modern resolution for ESM + TS
+        "types": ["node"], // Include Node.js type definitions
+        "allowImportingTsExtensions": true, // Required when importing .ts directly
+        "verbatimModuleSyntax": true, // Keep import/export exactly as written
+        "strict": true, // All strict type checks
+        "forceConsistentCasingInFileNames": true, // Ensure file name casing consistency
+        "skipLibCheck": true // Speeds up checking, skips .d.ts validation
+    },
+    "include": ["src/**/*.ts", "bin/*.ts"],
+    "exclude": ["node_modules", "dist", ".idea"]
+}

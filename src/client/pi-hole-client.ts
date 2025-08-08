@@ -56,6 +56,9 @@ export class PiHoleClient {
     }
 
     public async addAllowExactDomain(exactDomain: string): Promise<void> {
+        if (!this.sid) {
+            throw new MissingSidError();
+        }
         const response = await fetch(
             `${this.config.url}/api/domains/allow/exact`,
             {
