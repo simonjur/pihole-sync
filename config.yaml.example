@@ -1,0 +1,24 @@
+# works only for piholes ver. 6+
+pi-holes:
+    - url: 'http://192.168.1.35:9080'
+      password: '******'
+      name: 'backup-pihole'
+    - url: 'http://192.168.1.154:9080'
+      password: '******'
+      name: 'primary-pihole'
+
+allowed-domains:
+    - domain: 'www.googleadservices.com'
+      type: 'exact-allow'
+    - domain: 'click.discord.com'
+      type: 'exact-allow'
+    - domain: 'tracking.mojebohema.cz'
+      type: 'exact-allow'
+    - domain: 'click.rpishop.cz'
+      type: 'exact-allow'
+    - domain: 'www.google.com'
+      type: 'exact-allow'
+
+local-dns-records:
+    - domain: 'home.lab'
+      ip: '192.168.1.154'
