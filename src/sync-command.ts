@@ -7,6 +7,7 @@ import { getConfig } from './config.ts';
 import { createLogger } from './logger.ts';
 import { SyncService } from './service/sync-service.ts';
 import { PiHoleClient } from './client/pi-hole-client.ts';
+import 'dotenv/config';
 
 async function syncCommand(config: ConfigTypes, logger: winston.Logger) {
     // console.log(config);
@@ -58,7 +59,10 @@ export async function run() {
         .requiredOption('--config <path>', 'YAML config file path')
         .action(async (options) => {
             await syncCommand(
-                await getConfig(path.resolve(process.cwd(), options.config)),
+                await getConfig(
+                    logger,
+                    path.resolve(process.cwd(), options.config),
+                ),
                 logger,
             );
         });

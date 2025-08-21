@@ -35,4 +35,10 @@ export default defineConfig([
             'import/no-unresolved': 'off',
         },
     },
+    {
+        files: ['**/*.md'],
+        rules: {
+            'markdown/no-missing-label-refs': 'off', //disabled because it false matches github markdown alerts like [!IMPORTANT] or [!NOTE]
+        },
+    },
 ]);

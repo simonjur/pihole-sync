@@ -7,6 +7,14 @@ pi-holes:
       password: '******'
       name: 'primary-pihole'
 
+# uncomment following section to use bitwarden
+# NOTE: Any item must have defined custom field
+# named `active` of type `checkbox` and set to `true` to be used.
+# search is case-insensitive and will search in all bitwarden items
+# that contains (like) search-string in their name
+#pi-holes-from-bitwarden:
+#  search-string: 'pihole'
+
 allowed-domains:
     - domain: 'www.googleadservices.com'
       type: 'exact-allow'

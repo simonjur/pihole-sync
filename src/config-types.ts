@@ -2,11 +2,14 @@ export type PiHoleCredentials = {
     url: string;
     name: string;
     password: string;
-    version: 5 | 6;
+    version?: 5 | 6;
 };
 
 export type ConfigTypes = {
     'pi-holes'?: PiHoleCredentials[];
+    'pi-holes-from-bitwarden'?: {
+        'search-string': string;
+    };
     'allowed-domains'?: {
         domain: string;
         type: 'exact-allow' | 'regex-allow';

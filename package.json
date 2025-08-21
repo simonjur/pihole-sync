@@ -10,7 +10,7 @@
         "node": ">=24"
     },
     "scripts": {
-        "sync": "node bin/sync.ts",
+        "sync": "node bin/sync.ts --config ./config.yaml",
         "format:check": "prettier --check .",
         "format:fix": "prettier --write .",
         "lint": "eslint",
@@ -20,8 +20,10 @@
         "chalk": "^5.5.0",
         "commander": "^14.0.0",
         "date-fns": "^4.1.0",
+        "dotenv": "^17.2.1",
         "winston": "^3.17.0",
-        "yaml": "^2.8.0"
+        "yaml": "^2.8.0",
+        "zx": "^8.8.1"
     },
     "devDependencies": {
         "@eslint/js": "^9.32.0",
