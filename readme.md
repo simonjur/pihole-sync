@@ -38,6 +38,17 @@ Or use local Bitwarden:
 > [!NOTE]
 > needs [bw cli](https://www.npmjs.com/package/@bitwarden/cli) to work)
 
+Make sure you have logged in to bw cli first:
+
+```bash
+bw login
+```
+
+and then put env var `BW_SESSION` from the output to your .env file:
+```dotenv
+BW_SESSION=some-bas64-token
+```
+
 ```yaml
 # if defined will overwrite anything in pi-holes section
 pi-holes-from-bitwarden:
